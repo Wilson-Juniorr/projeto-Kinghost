@@ -1,0 +1,230 @@
+.s-hero{
+    margin-top: 11.9rem;
+    background-color: $purple;
+    padding-top: 3.9rem;
+    .container{
+        @include flex(row, flex-start, space-between)
+    }
+    .text{
+        width: 100%;
+        max-width: 55.5rem;
+        h1{
+            font-family: 'PT Sans', sans-serif; 
+            font-weight: 700;
+            font-size: 4.8rem;
+            line-height: 120%;
+            color: $white;
+            margin-bottom: 1.6rem;
+        }
+        p{
+            font-family: 'Lato';
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 150%;
+            color: $white;
+            max-width: 48.8rem ;
+            margin-bottom: 3.2rem;
+        }
+        button{
+            @include style-btn(5.4rem, $yellow, #7b4ad9);
+            font-family: 'PT Sans', sans-serif;
+            font-size: 1.7rem;
+            margin-bottom: 8.6rem;
+        }
+         
+        .conheca{
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            width: 100%;
+            max-width: 21.5rem;
+            .icon{
+                padding: 9px;
+                background: rgba(124, 74, 217, 0.4);
+                border-radius: 0.6rem;
+                width: 4.2rem;
+                height: 4.2rem;
+            }
+            span{
+                font-family: 'Lato', sans-serif;
+                font-weight: 700;
+                font-size: 1.6rem;
+                line-height: 1.9rem;
+                color: $white;
+
+            }
+        }
+        
+    }
+    .image{
+        position: relative;
+        top: 3.7rem;
+    }
+    @include resposive(991px){
+        .container{
+            flex-direction: column;
+        }
+        .text{
+            max-width: 100%;
+            h1{
+                text-align: center;
+            }
+            p{
+                max-width: 100%;
+                text-align: center;
+            }
+            button{
+                margin: 0 auto;
+                display: block;
+                margin-bottom: 2rem;
+                margin-bottom: 4.0rem;
+            }
+            .conheca{
+                justify-content: center;
+                max-width: 100%;
+            }
+
+        }
+    }
+    @include resposive(600px){
+        padding-top: 2rem;
+        margin-top: 8rem;
+        .text{
+            h1{
+                font-size: 4.3rem;
+            }
+        }
+        .image{
+            left: -21px;
+        }
+    }
+}
+
+.s-resources{
+    padding-top: 14.9rem;
+    padding-bottom: 9.9rem;
+    .top{
+        @include flex(row, center, space-between);
+        margin-bottom: 5.3rem;
+        h2{
+            font-family: 'PT Sans';
+            font-weight: 700;
+            font-size: 3.2rem;
+            line-height: 130%;
+            color: $gray-01;
+            max-width: 50.2rem; 
+        }
+        p{
+            font-family: 'Lato'; 
+            font-weight: 700;
+            font-size: 1.6rem;
+            line-height: 150%;
+            color: $gray-02;
+        }
+    }
+    .content{
+        @include flex(row, flex-start, space-between);
+        .icon{
+            width: 6.4rem;
+            height: 6.4rem;
+            background-color: rgba(197, 190, 220, 0.1);
+            border-radius: 1.2rem;
+            @include flex(center, center, center);
+            margin-bottom: 3rem;
+        }
+        .info{
+            max-width: 23.9rem;
+            h4{
+                font-family: 'PT Sans';
+                font-weight: 700;
+                font-size: 1.8rem;
+                line-height: 2.2rem;
+                color: $purple;
+                margin-bottom: 2rem;
+            }
+            p{
+                font-family: 'Lato';
+                font-weight: 400;
+                font-size: 1.6rem;
+                line-height: 165%;
+                color: $gray-02;
+            }
+        }
+        .card-featured{
+            width: 100%;
+            max-width: 280px;
+            height: 323px;
+            background: rgba(197, 190, 220, 0.1);
+            border-radius: 1.2rem;
+            padding-top: 4.1rem;
+            padding-left: 4.2rem;
+            margin-right: 5.4rem;
+            .icon{
+                background-color: $white;
+            }
+            .info{
+                max-width: 20.4rem;
+            }
+        }
+        ul{
+            width: 100%;
+            max-width: 90.4rem;
+            margin-top: 4.1rem;
+            @include flex(row, flex-start, space-between);
+            padding-bottom: 6.5rem;
+            border-bottom: 0.3rem solid rgba(175, 133, 255, 0.1);
+            padding-left: 2rem;
+        }
+    }
+    @include resposive(991px){
+        .content{
+            flex-direction: column;
+        align-items: flex-start;
+        .card-featured{
+            max-width: 100%;
+            padding: 30px;    
+            height: 60%;
+            margin-bottom: 3rem;
+            @include flex(column, center, center);
+            .info{
+                max-width: 100%;
+                h4,p{
+                    text-align: center;
+                }
+            }
+            }
+        }
+    }
+    @include resposive(768px){
+        padding-top: 10rem;
+        padding-bottom: 5rem;
+            .top{
+                flex-direction: column;
+                text-align: center;
+                h2{
+                    margin-bottom: 20px;
+            }
+        }
+        .content{
+            ul{
+                gap: 25px;
+            }
+        }
+
+    }
+    @include resposive(480px) {
+        padding-top: 6rem;
+        .content{
+            ul{
+                flex-direction: column;
+                padding-left: 0px;
+                li{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 50px;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
